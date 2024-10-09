@@ -1,0 +1,29 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--    <bean id="alien" class="org.myspring.Alien" autowire="byName">-->
+    <bean id="alien" class="org.myspring.Alien" autowire="byType">
+        <property name="age" value="24" />
+        <property name="com" ref="com" />
+
+<!--        <constructor-arg index="0" value="28" />-->
+<!--        <constructor-arg index= "1" ref="lap1" />-->
+
+<!--        <constructor-arg name="age" value="28" />-->
+<!--        <constructor-arg name="lap" ref="lap1" />-->
+
+
+
+
+    </bean>
+
+<!--    <bean id="alien2" class="org.myspring.Alien">-->
+<!--    </bean>-->
+
+
+    <bean id="com1" class="org.myspring.Laptop" primary="true"></bean>
+
+    <bean id="com" class="org.myspring.Desktop"/>
+</beans>
